@@ -6,7 +6,7 @@ export default function About() {
           About Me
         </h2>
         <p className="text-gray-300 text-lg leading-relaxed">
-          I'm a passionate Full Stack Developer and Software Engineer with a knack for building dynamic, scalable applications.
+          I am a passionate Full Stack Developer and Software Engineer with a knack for building dynamic, scalable applications.
           <br />
           Currently pursuing B.Tech at AKTU, I’ve interned at Modgenics and PieCloud, and serve as Co-Lead at GDSC-AKGEC. I thrive on hackathons, real-world problem solving, and staying on the cutting edge of dev tech.
         </p>
