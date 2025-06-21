@@ -1,4 +1,20 @@
 @import "tailwindcss";
+/* globals.css */
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .perspective {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
 
 :root {
   --bg: #0f172a;
@@ -7,11 +23,16 @@
   --accent: #6366f1;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--bg);
   color: var(--fg);
   font-family: 'Montserrat', sans-serif;
-  
+
+
 }
 code, pre {
   font-family: 'Source Code Pro', monospace;
