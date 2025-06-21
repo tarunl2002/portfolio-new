@@ -1,38 +1,55 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import { motion } from "framer-motion";
+import "react-vertical-timeline-component/style.min.css";
 
 const items = [
-  { icon: '🏆', title: 'Hacker House Goa ʼ24 Winner', role: 'Lead Dev – EcoCred' },
-  { icon: '🥇', title: 'Anveshana ʼ24 Winner', role: 'Co‑Creator – Swachh' },
-  { icon: '🧠', title: 'IEEE‑iSES (India) 1st', role: 'Founder – Brain Bridge' },
+  { icon: "🏆", title: "Hacker House Goa ʼ24 Winner", role: "Lead Dev – EcoCred" },
+  { icon: "🥇", title: "Anveshana ʼ24 Winner", role: "Co‑Creator – Swachh" },
+  { icon: "🧠", title: "IEEE‑iSES (India) 1st", role: "Founder – Brain Bridge" },
 ];
 
 export default function Achievements() {
   return (
-    <section id="experience" className="py-20 px-6">
-      <motion.h2 className="text-4xl font-bold text-center mb-12" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+    <section
+      id="achievements"
+      className="py-24 px-6 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]"
+    >
+      <motion.h2
+        className="text-4xl md:text-5xl font-bold text-center text-white mb-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         Achievements & Leadership
       </motion.h2>
 
-      <div className="relative max-w-4xl mx-auto space-y-16">
+      <VerticalTimeline lineColor="#4f46e5">
         {items.map((it, i) => (
-          <div key={i} className="relative pl-16">
-            {i < items.length - 1 && <span className="absolute left-8 top-8 h-full w-px bg-[var(--accent)]"></span>}
-            <motion.div
-              className="absolute left-0 top-4 w-12 h-12 bg-[var(--accent)] text-white flex items-center justify-center rounded-full text-xl shadow-xl"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              {it.icon}
-            </motion.div>
-            <motion.div className="bg-[var(--glass-bg)] backdrop-blur-[var(--blur)] p-6 rounded-2xl shadow-lg" whileHover={{ scale: 1.02 }}>
-              <h3 className="text-xl font-semibold text-white">{it.title}</h3>
-              <p className="mt-2 text-gray-300">{it.role}</p>
-            </motion.div>
-          </div>
+          <VerticalTimelineElement
+            key={i}
+            contentStyle={{
+              background: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(8px)",
+              color: "#fff",
+              border: "1px solid rgba(255,255,255,0.1)",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid #4f46e5" }}
+            iconStyle={{ background: "#4f46e5", color: "#fff", fontSize: "20px" }}
+            icon={
+              <div className="w-full h-full flex items-center justify-center text-2xl">
+                {it.icon}
+              </div>
+            }
+          >
+            <h3 className="text-xl font-semibold">{it.title}</h3>
+            <p className="mt-2 text-gray-300">{it.role}</p>
+          </VerticalTimelineElement>
         ))}
-      </div>
+      </VerticalTimeline>
     </section>
   );
 }
