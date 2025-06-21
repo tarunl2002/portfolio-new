@@ -5,7 +5,6 @@ import {
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
-import { FaBriefcase } from "react-icons/fa";
 
 export default function Experience() {
   const items = [
