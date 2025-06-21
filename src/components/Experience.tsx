@@ -1,5 +1,5 @@
 "use client";
-// @ts-expect-error
+// @ts-expect-error - third-party lib has incorrect types
 import {
   VerticalTimeline,
   VerticalTimelineElement,
