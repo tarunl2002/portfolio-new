@@ -30,7 +30,7 @@ export default function About() {
           viewport={{ once: true }}
         >
           <p>
-            I'm <span className="text-white font-semibold">Tarun Lalwani</span>, a Full-Stack Developer and Software Engineer passionate about building scalable apps, solving real-world problems, and leading tech initiatives.
+            I am <span className="text-white font-semibold">Tarun Lalwani</span>, a Full-Stack Developer and Software Engineer passionate about building scalable apps, solving real-world problems, and leading tech initiatives.
           </p>
           <p>
             Currently a <span className="text-white font-semibold">Software Developer Intern</span> at Modgenics, where I re-architected major features and improved performance by over 35%. Previously, I interned at Pie Cloud LLP, creating real-time tools and REST APIs using Laravel and React.
