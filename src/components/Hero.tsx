@@ -41,8 +41,8 @@ export default function Hero() {
               View Projects
             </a>
             <a
-              href="/resume.pdf"
-              download
+              href="/pdf/Tarun_Lalwani_85_Software.pdf"
+              download='Tarun Resume'
               className="px-6 py-3 rounded-lg border border-white hover:bg-white hover:text-black transition"
             >
               Download Resume
