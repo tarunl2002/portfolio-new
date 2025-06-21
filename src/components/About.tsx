@@ -36,10 +36,10 @@ export default function About() {
             Currently a <span className="text-white font-semibold">Software Developer Intern</span> at Modgenics, where I re-architected major features and improved performance by over 35%. Previously, I interned at Pie Cloud LLP, creating real-time tools and REST APIs using Laravel and React.
           </p>
           <p>
-            As the <span className="text-white font-semibold">Co-Lead of Google Developer Student Clubs (AKGEC)</span>, I've led workshops, hosted hackathons, and mentored 200+ students on technologies like Google Cloud, Flutter, and AI.
+            As the <span className="text-white font-semibold">Co-Lead of Google Developer Student Clubs (AKGEC)</span>, I&apos;ve led workshops, hosted hackathons, and mentored 200+ students on technologies like Google Cloud, Flutter, and AI.
           </p>
           <p>
-            I'm also a <span className="text-white font-semibold">4x Hackathon Winner</span> and have built award-winning apps like <span className="text-white font-semibold">Brain Bridge</span>, <span className="text-white font-semibold">Swachh</span>, and <span className="text-white font-semibold">BrewCraft</span>.
+            I&apos;m also a <span className="text-white font-semibold">4x Hackathon Winner</span> and have built award-winning apps like <span className="text-white font-semibold">Brain Bridge</span>, <span className="text-white font-semibold">Swachh</span>, and <span className="text-white font-semibold">BrewCraft</span>.
           </p>
         </motion.div>
 
