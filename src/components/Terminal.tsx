@@ -36,7 +36,7 @@ export default function Terminal() {
     };
 
     typeCommand();
-  }, [currentCommand]);
+  }, [currentCommand, commands]);
 
   useEffect(() => {
     const cursor = setInterval(() => setShowCursor(prev => !prev), 500);

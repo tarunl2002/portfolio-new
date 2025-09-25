@@ -127,7 +127,7 @@ export default function Projects() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <motion.div key={project.name} variants={itemVariants}>
             <ProjectCard project={project} />
           </motion.div>
