@@ -13,14 +13,44 @@
   .rotate-y-180 {
     transform: rotateY(180deg);
   }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+  }
+}
 
 :root {
   --bg: #0f172a;
   --fg: #e2e8f0;
   --accent-light: rgba(99, 102, 241, 0.4);
   --accent: #6366f1;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -31,11 +61,39 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: 'Montserrat', sans-serif;
-
-
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #06b6d4, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0891b2, #7c3aed);
+}
+
 code, pre {
   font-family: 'Source Code Pro', monospace;
+}
+
+/* Selection styles */
+::selection {
+  background: rgba(6, 182, 212, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(6, 182, 212, 0.3);
+  color: white;
 }
 
 /* Add SVG ambient backgrounds at the top level */

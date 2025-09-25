@@ -29,9 +29,9 @@ export default function Achievements() {
       </motion.h2>
 
       <VerticalTimeline lineColor="#4f46e5">
-        {items.map((it, i) => (
+        {items.map((achievement, i) => (
           <VerticalTimelineElement
-            key={i}
+            key={`${achievement.title}-${i}`}
             contentStyle={{
               background: "rgba(255, 255, 255, 0.05)",
               backdropFilter: "blur(8px)",
@@ -42,12 +42,12 @@ export default function Achievements() {
             iconStyle={{ background: "#4f46e5", color: "#fff", fontSize: "20px" }}
             icon={
               <div className="w-full h-full flex items-center justify-center text-2xl">
-                {it.icon}
+                {achievement.icon}
               </div>
             }
           >
-            <h3 className="text-xl font-semibold">{it.title}</h3>
-            <p className="mt-2 text-gray-300">{it.role}</p>
+            <h3 className="text-xl font-semibold">{achievement.title}</h3>
+            <p className="mt-2 text-gray-300">{achievement.role}</p>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
