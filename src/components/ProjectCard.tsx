@@ -119,7 +119,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                   className="bg-gradient-to-r from-cyan-600 to-purple-600 px-3 py-1 rounded-full text-xs font-medium shadow-lg"
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: idx * 0.1, type: 'spring' }}
+                  transition={{ delay: idx * 0.1, type: 'spring' as const }}
                   whileHover={{ scale: 1.1, boxShadow: '0 0 15px rgba(6, 182, 212, 0.5)' }}
                 >
                   {tag}

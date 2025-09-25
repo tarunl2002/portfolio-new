@@ -134,7 +134,7 @@ export default function Experience() {
                       className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-400/30 px-2 py-1 rounded-full text-xs text-cyan-300"
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.4 + idx * 0.1, type: 'spring' }}
+                      transition={{ delay: 0.4 + idx * 0.1, type: 'spring' as const }}
                       viewport={{ once: true }}
                       whileHover={{ scale: 1.1, backgroundColor: 'rgba(6, 182, 212, 0.2)' }}
                     >
