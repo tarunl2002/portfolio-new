@@ -1,7 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function FloatingCode() {
+  const [isClient, setIsClient] = useState(false);
+  
   const codeSnippets = [
     'const skills = ["React", "Node.js", "Go"];',
     'function buildAmazingApps() { return "success"; }',
@@ -13,6 +16,12 @@ export default function FloatingCode() {
     'export default TarunLalwani;'
   ];
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {codeSnippets.map((code, i) => (
@@ -20,8 +29,8 @@ export default function FloatingCode() {
           key={i}
           className="absolute text-xs md:text-sm font-mono text-cyan-400/20 whitespace-nowrap"
           initial={{
-            x: Math.random() * window.innerWidth,
-            y: window.innerHeight + 50,
+            x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+            y: (typeof window !== 'undefined' ? window.innerHeight : 800) + 50,
             opacity: 0,
           }}
           animate={{

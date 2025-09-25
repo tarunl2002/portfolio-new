@@ -2,17 +2,17 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+const commands = [
+  { cmd: 'whoami', output: 'tarun-lalwani' },
+  { cmd: 'ls skills/', output: 'react.js  node.js  go  python  aws' },
+  { cmd: 'cat experience.txt', output: 'Software Engineer @ Modgenics\nGDSC Co-Lead @ AKGEC' },
+  { cmd: 'git log --oneline', output: '4x Hackathon Winner 🏆\nBuilt Brain Bridge, Swachh, BrewCraft' },
+];
+
 export default function Terminal() {
   const [currentCommand, setCurrentCommand] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-
-  const commands = [
-    { cmd: 'whoami', output: 'tarun-lalwani' },
-    { cmd: 'ls skills/', output: 'react.js  node.js  go  python  aws' },
-    { cmd: 'cat experience.txt', output: 'Software Engineer @ Modgenics\nGDSC Co-Lead @ AKGEC' },
-    { cmd: 'git log --oneline', output: '4x Hackathon Winner 🏆\nBuilt Brain Bridge, Swachh, BrewCraft' },
-  ];
 
   useEffect(() => {
     const typeCommand = () => {
@@ -36,7 +36,7 @@ export default function Terminal() {
     };
 
     typeCommand();
-  }, [currentCommand, commands]);
+  }, [currentCommand]);
 
   useEffect(() => {
     const cursor = setInterval(() => setShowCursor(prev => !prev), 500);

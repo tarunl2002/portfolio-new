@@ -109,11 +109,13 @@ export default function Experience() {
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="w-6 h-6 object-contain"
-                  />
+                  <div className="w-6 h-6 relative">
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
                 </motion.div>
               }
             >
